@@ -6,6 +6,6 @@ public class LoginTests extends TestBase{
 
     @Test
     public void loginPositiveTest(){
-
+        System.out.println("==============");
     }
 }
