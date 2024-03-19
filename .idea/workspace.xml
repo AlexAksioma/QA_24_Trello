@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b0805a2f-3138-4a43-8040-30d800bd7c2f" name="Changes" comment="added method loginPositiveTest+assert">
-      <change afterPath="$PROJECT_DIR$/src/main/java/manager/HelperBoards.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/UserDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/BoardsTests.java" afterDir="false" />
+    <list default="true" id="b0805a2f-3138-4a43-8040-30d800bd7c2f" name="Changes" comment="added helperboards, BoardsTests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/manager/ApplicationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manager/ApplicationManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/LoginTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/TestBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/manager/HelperBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manager/HelperBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/manager/HelperBoards.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manager/HelperBoards.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/BoardsTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/BoardsTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +74,79 @@
       <recent name="C:\QA_Auto_Projects\QA_24\QA_24_Trello\src\test\java" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.LoginTests.loginPositiveTest">
+  <component name="RunManager" selected="Gradle.BoardsTests">
+    <configuration name="BoardsTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;tests.BoardsTests&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="BoardsTests.createNewBoardNegativeTest_EmptyBoardTitle" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;tests.BoardsTests.createNewBoardNegativeTest_EmptyBoardTitle&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="BoardsTests.createNewBoardPositiveTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;tests.BoardsTests.createNewBoardPositiveTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="LoginTests.loginPositiveTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -128,6 +197,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.BoardsTests" />
+        <item itemvalue="Gradle.BoardsTests.createNewBoardNegativeTest_EmptyBoardTitle" />
+        <item itemvalue="Gradle.BoardsTests.createNewBoardPositiveTest" />
         <item itemvalue="Gradle.LoginTests.loginPositiveTest" />
         <item itemvalue="Gradle.Selectors.startTrello" />
       </list>
@@ -174,7 +246,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710494232278</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added helperboards, BoardsTests">
+      <option name="closed" value="true" />
+      <created>1710865548694</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1710865548695</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -182,6 +262,7 @@
     <MESSAGE value="added project" />
     <MESSAGE value="added method loginPositiveTest" />
     <MESSAGE value="added method loginPositiveTest+assert" />
-    <option name="LAST_COMMIT_MESSAGE" value="added method loginPositiveTest+assert" />
+    <MESSAGE value="added helperboards, BoardsTests" />
+    <option name="LAST_COMMIT_MESSAGE" value="added helperboards, BoardsTests" />
   </component>
 </project>
