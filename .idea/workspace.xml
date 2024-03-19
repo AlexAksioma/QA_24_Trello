@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b0805a2f-3138-4a43-8040-30d800bd7c2f" name="Changes" comment="added method loginPositiveTest">
+    <list default="true" id="b0805a2f-3138-4a43-8040-30d800bd7c2f" name="Changes" comment="added method loginPositiveTest+assert">
+      <change afterPath="$PROJECT_DIR$/src/main/java/manager/HelperBoards.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/UserDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/BoardsTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/manager/ApplicationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manager/ApplicationManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/manager/HelperBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manager/HelperBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/manager/HelperUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manager/HelperUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/LoginTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/TestBase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +68,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/QA_Auto_Projects/QA_21_22/QA21-22_Trello",
+    "last_opened_file_path": "C:/QA_Auto_Projects/QA_24/QA_24_Trello",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
@@ -164,13 +166,22 @@
       <option name="project" value="LOCAL" />
       <updated>1710262279503</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added method loginPositiveTest+assert">
+      <option name="closed" value="true" />
+      <created>1710494232278</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1710494232278</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added method starttrello" />
     <MESSAGE value="added project" />
     <MESSAGE value="added method loginPositiveTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="added method loginPositiveTest" />
+    <MESSAGE value="added method loginPositiveTest+assert" />
+    <option name="LAST_COMMIT_MESSAGE" value="added method loginPositiveTest+assert" />
   </component>
 </project>
