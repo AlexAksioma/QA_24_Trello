@@ -23,17 +23,22 @@ public class HelperBoards extends HelperBase {
     By btnCloseSubmit = By.cssSelector("input[value='Close']");
     By btnDeleteBoard = By.cssSelector("button[data-testid='close-board-delete-board-button']");
     By btnDeleteConfirm = By.cssSelector("button[data-testid='close-board-delete-board-confirm-button']");
+    //=========================================================================
+    By popUpBoardDeleted = By.cssSelector("span[class='QMKgZFIlTLiEJN']");
 
     public void createNewBoard(BoardDto boardDto) {
         clickBase(btnCreateNewBoard);
         typeBase(inputBoardTitle, boardDto.getBoardTitle());
-        pause(3);
-        clickBase(btnCreateSubmit);
+        //pause(3);
+        //clickBase(btnCreateSubmit);
+        clickBaseWait(btnCreateSubmit, 5);
     }
 
     public void deleteBoard(BoardDto boardDto) {
         clickBoardTitle(boardDto.getBoardTitle());
-        clickBase(btnDots);
+        //pause(3);
+        //clickBase(btnDots);
+        clickBaseWait(btnDots, 5);
         clickBase(btnCloseBoard);
         clickBase(btnCloseSubmit);
         clickBase(btnDeleteBoard);
@@ -63,5 +68,9 @@ public class HelperBoards extends HelperBase {
 
     public boolean isElementPresent_boardTitle() {
         return isElementPresent(boardTitle);
+    }
+
+    public boolean textToBePresentInElement_BoardDeleted(String text, int time) {
+        return textToBePresentInElement(popUpBoardDeleted, text, time);
     }
 }

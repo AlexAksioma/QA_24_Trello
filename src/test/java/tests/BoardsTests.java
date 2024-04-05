@@ -1,15 +1,20 @@
 package tests;
 
+import manager.TestNGListener;
 import models.BoardDto;
 import org.testng.Assert;
+import org.testng.IRetryAnalyzer;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import java.lang.reflect.Method;
 import java.util.Random;
 
-public class BoardsTests extends TestBase{
+@Listeners(TestNGListener.class)
+
+public class BoardsTests extends TestBase {
 
     @BeforeClass
     public void loginWithData(){
@@ -26,6 +31,7 @@ public class BoardsTests extends TestBase{
         //String boardTitle = "qa24_"+i;
         app.getHelperBoards().createNewBoard(boardDto);
         Assert.assertTrue(app.getHelperBoards().isTextInElementEquals_boardTitle(boardDto.getBoardTitle()));
+        //Assert.assertTrue(app.getHelperBoards().isTextInElementEquals_boardTitle("111"));
     }
 
     @Test
@@ -48,7 +54,8 @@ public class BoardsTests extends TestBase{
         app.getHelperBoards().clickBtnBoards();
 
         app.getHelperBoards().deleteBoard(boardDto);
-        //Assert.assertTrue();  create method isText  with wait
+        Assert.assertTrue(app.getHelperBoards()
+                .textToBePresentInElement_BoardDeleted("Board deleted.", 5));
     }
 
 //    @AfterMethod
