@@ -1,5 +1,7 @@
 package tests;
 
+import dataproviders.DataProviderBoard;
+import helpers.RetryAnalyzer;
 import manager.TestNGListener;
 import models.BoardDto;
 import org.testng.Assert;
@@ -17,17 +19,17 @@ import java.util.Random;
 public class BoardsTests extends TestBase {
 
     @BeforeClass
-    public void loginWithData(){
+    public void loginWithData() {
         app.getHelperUser().login(user.getEmail(), user.getPassword());
     }
 
-    @Test
-    public void createNewBoardPositiveTest(Method method){
-        int i = new Random().nextInt(1000);
-        BoardDto boardDto = BoardDto.builder()
-                .boardTitle("qa24_"+i)
-                .build();
-        logger.info("start test "+method.getName()+" board title --> "+boardDto.getBoardTitle());
+    @Test(dataProvider = "DP_createNewBoardPositiveTest", dataProviderClass = DataProviderBoard.class)
+    public void createNewBoardPositiveTest(Method method, BoardDto boardDto) {
+//        int i = new Random().nextInt(1000);
+//        BoardDto boardDto = BoardDto.builder()
+//                .boardTitle("qa24_"+i)
+//                .build();
+        logger.info("start test " + method.getName() + " board title --> " + boardDto.getBoardTitle());
         //String boardTitle = "qa24_"+i;
         app.getHelperBoards().createNewBoard(boardDto);
         Assert.assertTrue(app.getHelperBoards().isTextInElementEquals_boardTitle(boardDto.getBoardTitle()));
@@ -35,7 +37,7 @@ public class BoardsTests extends TestBase {
     }
 
     @Test
-    public void createNewBoardNegativeTest_EmptyBoardTitle(){
+    public void createNewBoardNegativeTest_EmptyBoardTitle() {
         BoardDto boardDto = BoardDto.builder()
                 .boardTitle("   ")
                 .build();
@@ -43,26 +45,26 @@ public class BoardsTests extends TestBase {
         Assert.assertTrue(app.getHelperBoards().isElementPresent_inputBoardTitle());
     }
 
-    @Test
-    public void deleteBoardPositiveTest(Method method){
+    @Test(retryAnalyzer = RetryAnalyzer.class)
+    public void deleteBoardPositiveTest(Method method) {
         int i = new Random().nextInt(1000);
         BoardDto boardDto = BoardDto.builder()
-                .boardTitle("qa24_"+i)
+                .boardTitle("qa24_" + i)
                 .build();
-        logger.info("start test "+method.getName()+" board title --> "+boardDto.getBoardTitle());
+        logger.info("start test " + method.getName() + " board title --> " + boardDto.getBoardTitle());
         app.getHelperBoards().createNewBoard(boardDto);
         app.getHelperBoards().clickBtnBoards();
 
         app.getHelperBoards().deleteBoard(boardDto);
         Assert.assertTrue(app.getHelperBoards()
-                .textToBePresentInElement_BoardDeleted("Board deleted.", 5));
+                .textToBePresentInElement_BoardDeleted("Board deleted.", 1));
     }
 
-//    @AfterMethod
-//    public void afterTest(){
-//        if(app.getHelperBoards().isElementPresent_boardTitle())
-//            app.getHelperBoards().clickBtnBoards();
-//        if(app.getHelperBoards().isElementPresent_inputBoardTitle())
-//            app.getHelperBoards().clickBtnCloseCreateBoardForm();
-//    }
+    @AfterMethod
+    public void afterTest() {
+        if (app.getHelperBoards().isElementPresent_boardTitle())
+            app.getHelperBoards().clickBtnBoards();
+        if (app.getHelperBoards().isElementPresent_inputBoardTitle())
+            app.getHelperBoards().clickBtnCloseCreateBoardForm();
+    }
 }
