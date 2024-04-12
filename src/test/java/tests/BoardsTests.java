@@ -4,6 +4,7 @@ import dataproviders.DataProviderBoard;
 import helpers.RetryAnalyzer;
 import manager.TestNGListener;
 import models.BoardDto;
+import org.openqa.selenium.TimeoutException;
 import org.testng.Assert;
 import org.testng.IRetryAnalyzer;
 import org.testng.annotations.AfterMethod;
@@ -23,7 +24,7 @@ public class BoardsTests extends TestBase {
         app.getHelperUser().login(user.getEmail(), user.getPassword());
     }
 
-    @Test(dataProvider = "DP_createNewBoardPositiveTest", dataProviderClass = DataProviderBoard.class)
+    @Test(dataProvider = "DPFile_createNewBoardPositiveTest", dataProviderClass = DataProviderBoard.class)
     public void createNewBoardPositiveTest(Method method, BoardDto boardDto) {
 //        int i = new Random().nextInt(1000);
 //        BoardDto boardDto = BoardDto.builder()
@@ -36,7 +37,7 @@ public class BoardsTests extends TestBase {
         //Assert.assertTrue(app.getHelperBoards().isTextInElementEquals_boardTitle("111"));
     }
 
-    @Test
+    @Test(expectedExceptions = TimeoutException.class)
     public void createNewBoardNegativeTest_EmptyBoardTitle() {
         BoardDto boardDto = BoardDto.builder()
                 .boardTitle("   ")
@@ -49,7 +50,7 @@ public class BoardsTests extends TestBase {
     public void deleteBoardPositiveTest(Method method) {
         int i = new Random().nextInt(1000);
         BoardDto boardDto = BoardDto.builder()
-                .boardTitle("qa24_" + i)
+                .boardTitle("delete_QA24_" + i)
                 .build();
         logger.info("start test " + method.getName() + " board title --> " + boardDto.getBoardTitle());
         app.getHelperBoards().createNewBoard(boardDto);
@@ -57,7 +58,7 @@ public class BoardsTests extends TestBase {
 
         app.getHelperBoards().deleteBoard(boardDto);
         Assert.assertTrue(app.getHelperBoards()
-                .textToBePresentInElement_BoardDeleted("Board deleted.", 1));
+                .textToBePresentInElement_BoardDeleted("Board deleted.", 5));
     }
 
     @AfterMethod

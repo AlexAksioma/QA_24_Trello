@@ -2,6 +2,7 @@ package manager;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,14 +17,19 @@ public class ApplicationManager {
     HelperUser helperUser;
     HelperBoards helperBoards;
 
+    HelperProfile helperProfile;
+
     public void init(){
-        driver = new EventFiringWebDriver(new ChromeDriver());
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--lang=en");
+        driver = new EventFiringWebDriver(new ChromeDriver(options));
         driver.navigate().to("https://trello.com/");
         logger.info("start testing --- navigate to --> https://trello.com/");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         helperUser = new HelperUser(driver);
         helperBoards = new HelperBoards(driver);
+        helperProfile = new HelperProfile(driver);
         driver.register(new WDListener());
 
     }
@@ -39,6 +45,10 @@ public class ApplicationManager {
 
     public HelperBoards getHelperBoards(){
         return helperBoards;
+    }
+
+    public HelperProfile getHelperProfile(){
+        return helperProfile;
     }
 
 }

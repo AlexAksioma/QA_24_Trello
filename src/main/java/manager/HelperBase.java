@@ -64,5 +64,13 @@ public class HelperBase {
             return false;
         }
     }
+    public boolean textToBePresentInAttribute(By locator, String attribute, String text, int time){
+        try {
+           WebDriverWait wait = new WebDriverWait(driver, time);
+                    return wait.until(ExpectedConditions.attributeToBe(locator, attribute,text));
+        }catch (Exception e){
+            return false;
+        }
+    }
 
 }

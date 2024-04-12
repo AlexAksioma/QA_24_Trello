@@ -47,7 +47,8 @@ public class HelperBoards extends HelperBase {
 
     private void clickBoardTitle(String boardTitle) {
         String xPathBoardTitle = "//div[@title='" + boardTitle + "']";
-        clickBase(By.xpath(xPathBoardTitle));
+        //clickBase(By.xpath(xPathBoardTitle));
+        clickBaseWait(By.xpath(xPathBoardTitle), 10);
     }
 
     public boolean isTextInElementEquals_boardTitle(String text) {
