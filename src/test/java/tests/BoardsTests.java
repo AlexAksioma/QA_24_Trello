@@ -18,13 +18,13 @@ import java.util.Random;
 @Listeners(TestNGListener.class)
 
 public class BoardsTests extends TestBase {
+//
+//    @BeforeClass(alwaysRun = true)
+//    public void loginWithData() {
+//        app.getHelperUser().login(user.getEmail(), user.getPassword());
+//    }
 
-    @BeforeClass
-    public void loginWithData() {
-        app.getHelperUser().login(user.getEmail(), user.getPassword());
-    }
-
-    @Test(dataProvider = "DPFile_createNewBoardPositiveTest", dataProviderClass = DataProviderBoard.class)
+    @Test(groups = {"smoke"}, dataProvider = "DPFile_createNewBoardPositiveTest", dataProviderClass = DataProviderBoard.class)
     public void createNewBoardPositiveTest(Method method, BoardDto boardDto) {
 //        int i = new Random().nextInt(1000);
 //        BoardDto boardDto = BoardDto.builder()
@@ -46,7 +46,7 @@ public class BoardsTests extends TestBase {
         Assert.assertTrue(app.getHelperBoards().isElementPresent_inputBoardTitle());
     }
 
-    @Test(retryAnalyzer = RetryAnalyzer.class)
+    @Test//(retryAnalyzer = RetryAnalyzer.class)
     public void deleteBoardPositiveTest(Method method) {
         int i = new Random().nextInt(1000);
         BoardDto boardDto = BoardDto.builder()
@@ -61,7 +61,7 @@ public class BoardsTests extends TestBase {
                 .textToBePresentInElement_BoardDeleted("Board deleted.", 5));
     }
 
-    @AfterMethod
+    @AfterMethod(alwaysRun = true)
     public void afterTest() {
         if (app.getHelperBoards().isElementPresent_boardTitle())
             app.getHelperBoards().clickBtnBoards();

@@ -25,6 +25,8 @@ public class HelperProfile extends HelperBase{
     By popUpAvatarAdded = By.xpath("//span[@class='css-oxh4dz']");
     By imgWithText = By.xpath("//img[@id='drag-zone-image']");
 
+    By btnCansel = By.xpath("//span[text()='Cancel']/..");
+
 
     public void changeAvatar(String filePath){
         clickBaseWait(btnAccount, 3);
@@ -52,5 +54,15 @@ public class HelperProfile extends HelperBase{
     }
     public boolean isTextToBePresentInAttribute_format_invalid(String attribute, String text, int time){
         return textToBePresentInAttribute(imgWithText,attribute,text,time);
+    }
+
+    public void clickBtnCansel() {
+        clickBaseWait(btnCansel, 5);
+    }
+
+    public void goToTrelloBoardsPage() {
+        List<String> tabs = new ArrayList<>(driver.getWindowHandles());
+        driver.close();
+        driver.switchTo().window(tabs.get(0));
     }
 }
