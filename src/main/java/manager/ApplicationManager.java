@@ -54,7 +54,7 @@ public class ApplicationManager {
 
     public void stop() {
         logger.info("stop testing --- navigate to --> https://trello.com/");
-        //driver.quit();
+        driver.quit();
     }
 
     public HelperUser getHelperUser() {

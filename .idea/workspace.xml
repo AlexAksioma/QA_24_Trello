@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b0805a2f-3138-4a43-8040-30d800bd7c2f" name="Changes" comment="added browser, xml file">
-      <change afterPath="$PROJECT_DIR$/src/main/java/manager/PropertiesReader.java" afterDir="false" />
+    <list default="true" id="b0805a2f-3138-4a43-8040-30d800bd7c2f" name="Changes" comment="added properties reader">
       <change afterPath="$PROJECT_DIR$/src/test/resources/login.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/manager/ApplicationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manager/ApplicationManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/TestBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/bash_command.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/bash_command.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +77,7 @@
       <recent name="C:\QA_Auto_Projects\QA_24\QA_24_Trello\src\test\java" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.BoardsTests.deleteBoardPositiveTest">
+  <component name="RunManager" selected="Gradle.ProfileTests">
     <configuration name="BoardsTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -202,9 +200,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.ProfileTests" />
         <item itemvalue="Gradle.BoardsTests.deleteBoardPositiveTest" />
         <item itemvalue="Gradle.BoardsTests" />
-        <item itemvalue="Gradle.ProfileTests" />
         <item itemvalue="Gradle.ProfileTests.changeAvatarNegativeTest_wrongFileFormat" />
         <item itemvalue="Gradle.ProfileTests.changeAvatarPositiveTest" />
       </list>
@@ -307,7 +305,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713286075948</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="added properties reader">
+      <option name="closed" value="true" />
+      <created>1713512025193</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1713512025193</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -325,6 +331,7 @@
     <MESSAGE value="added dataprovider, retryAnalyzer" />
     <MESSAGE value="added profile tests" />
     <MESSAGE value="added browser, xml file" />
-    <option name="LAST_COMMIT_MESSAGE" value="added browser, xml file" />
+    <MESSAGE value="added properties reader" />
+    <option name="LAST_COMMIT_MESSAGE" value="added properties reader" />
   </component>
 </project>

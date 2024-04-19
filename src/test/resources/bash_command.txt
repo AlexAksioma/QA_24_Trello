@@ -1,2 +1,3 @@
 .\gradlew clean boardtests
 .\gradlew clean boardtests -Pbrowser=firefox
+.\gradlew clean smoketests
