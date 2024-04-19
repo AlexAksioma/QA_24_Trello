@@ -1,6 +1,7 @@
 package tests;
 
 import manager.ApplicationManager;
+import manager.PropertiesReader;
 import models.UserDto;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,17 +13,19 @@ public class TestBase {
 
     Logger logger = LoggerFactory.getLogger(TestBase.class);
 
-    UserDto user = new UserDto("aksiomamedved@gmail.com","AlexMed123!");
+    //UserDto user = new UserDto("aksiomamedved@gmail.com","AlexMed123!");
+    UserDto user = new UserDto(PropertiesReader.getProperty("email")
+            , PropertiesReader.getProperty("password"));
 
     @BeforeSuite(alwaysRun = true)
-    public void setup(){
-        logger.info("login with email --> "+user.getEmail()+" password --> "+user.getPassword());
+    public void setup() {
+        logger.info("login with email --> " + user.getEmail() + " password --> " + user.getPassword());
         app.init();
         app.getHelperUser().login(user.getEmail(), user.getPassword());
     }
 
     @AfterSuite(alwaysRun = true)
-    public void tearDown(){
+    public void tearDown() {
         app.stop();
     }
 
