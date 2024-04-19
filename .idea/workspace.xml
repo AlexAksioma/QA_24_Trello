@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b0805a2f-3138-4a43-8040-30d800bd7c2f" name="Changes" comment="change test retry">
+    <list default="true" id="b0805a2f-3138-4a43-8040-30d800bd7c2f" name="Changes" comment="change test">
       <change afterPath="$PROJECT_DIR$/src/test/resources/login.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/BoardsTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/BoardsTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/board_titles.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/board_titles.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -337,7 +335,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713514394714</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="change test">
+      <option name="closed" value="true" />
+      <created>1713515265647</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1713515265647</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -358,6 +364,7 @@
     <MESSAGE value="added properties reader" />
     <MESSAGE value="change app manager" />
     <MESSAGE value="change test retry" />
-    <option name="LAST_COMMIT_MESSAGE" value="change test retry" />
+    <MESSAGE value="change test" />
+    <option name="LAST_COMMIT_MESSAGE" value="change test" />
   </component>
 </project>
