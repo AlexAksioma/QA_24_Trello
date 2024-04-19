@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b0805a2f-3138-4a43-8040-30d800bd7c2f" name="Changes" comment="added properties reader">
+    <list default="true" id="b0805a2f-3138-4a43-8040-30d800bd7c2f" name="Changes" comment="change test retry">
       <change afterPath="$PROJECT_DIR$/src/test/resources/login.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/manager/ApplicationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manager/ApplicationManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/bash_command.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/bash_command.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -313,7 +310,23 @@
       <option name="project" value="LOCAL" />
       <updated>1713512025193</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="change app manager">
+      <option name="closed" value="true" />
+      <created>1713513908298</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1713513908298</updated>
+    </task>
+    <task id="LOCAL-00014" summary="change test retry">
+      <option name="closed" value="true" />
+      <created>1713514103921</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1713514103921</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -332,6 +345,8 @@
     <MESSAGE value="added profile tests" />
     <MESSAGE value="added browser, xml file" />
     <MESSAGE value="added properties reader" />
-    <option name="LAST_COMMIT_MESSAGE" value="added properties reader" />
+    <MESSAGE value="change app manager" />
+    <MESSAGE value="change test retry" />
+    <option name="LAST_COMMIT_MESSAGE" value="change test retry" />
   </component>
 </project>

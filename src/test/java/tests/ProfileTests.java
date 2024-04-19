@@ -20,7 +20,7 @@ public class ProfileTests extends TestBase{
     @Test(groups = {"smoke"}, retryAnalyzer = RetryAnalyzer.class)
     public void changeAvatarPositiveTest(){
         app.getHelperProfile().changeAvatar("src/test/resources/qa_blue.jpg");
-        Assert.assertTrue(app.getHelperProfile().isElementPresent_popUpAvatarAdded(2));
+        Assert.assertTrue(app.getHelperProfile().isElementPresent_popUpAvatarAdded(5));
     }
 
     @Test
