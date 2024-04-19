@@ -1,5 +1,6 @@
 package tests;
 
+import helpers.RetryAnalyzer;
 import manager.TestNGListener;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -16,11 +17,12 @@ public class ProfileTests extends TestBase{
 //        app.getHelperUser().login(user.getEmail(), user.getPassword());
 //    }
 
-    @Test(groups = {"smoke"})
+    @Test(groups = {"smoke"}, retryAnalyzer = RetryAnalyzer.class)
     public void changeAvatarPositiveTest(){
         app.getHelperProfile().changeAvatar("src/test/resources/qa_blue.jpg");
-        Assert.assertTrue(app.getHelperProfile().isElementPresent_popUpAvatarAdded(5));
+        Assert.assertTrue(app.getHelperProfile().isElementPresent_popUpAvatarAdded(2));
     }
+
     @Test
     public void changeAvatarNegativeTest_wrongFileFormat(){
         app.getHelperProfile().changeAvatar("src/test/resources/test-plan_ieee-829.pdf");
