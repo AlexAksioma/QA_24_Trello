@@ -29,8 +29,8 @@ public class HelperProfile extends HelperBase{
 
 
     public void changeAvatar(String filePath){
-        clickBaseWait(btnAccount, 3);
-        clickBaseWait(btnManageAccount, 3);
+        clickBaseWait(btnAccount, 5);
+        clickBaseWait(btnManageAccount, 5);
         driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
         List<String> tabs = new ArrayList<>(driver.getWindowHandles());
         for (String s: tabs) {

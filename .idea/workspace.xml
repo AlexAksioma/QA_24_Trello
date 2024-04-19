@@ -6,6 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="b0805a2f-3138-4a43-8040-30d800bd7c2f" name="Changes" comment="change test retry">
       <change afterPath="$PROJECT_DIR$/src/test/resources/login.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/BoardsTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/BoardsTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/board_titles.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/board_titles.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -326,7 +329,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713514103921</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="change test retry">
+      <option name="closed" value="true" />
+      <created>1713514394714</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1713514394714</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="UnknownFeatures">
